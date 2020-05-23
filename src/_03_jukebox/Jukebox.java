@@ -26,14 +26,18 @@ import javazoom.jl.player.advanced.AdvancedPlayer;
  *   Right click your project and add it as a JAR (Under Java Build Path > Libraries).*/
 
 public class Jukebox implements Runnable, ActionListener {
+	JButton one = new JButton();
+	JButton two = new JButton();
+	JButton three = new JButton();
+	JButton four = new JButton();
+	JButton five = new JButton();
 
     public void run() {
 
 		// 1. Find an mp3 on your computer or on the Internet.
 		// 2. Create a Song object for that mp3
-//Song song = new Song("jarico-retrovi.mp3");
 		// 3. Play the Song
-//song.play();
+
 		/*
 		 * 4. Create a user interface for your Jukebox so that the user can to
 		 * choose which song to play. You can use can use a different button for
@@ -41,11 +45,6 @@ public class Jukebox implements Runnable, ActionListener {
 		 * cover is clicked, stop the currently playing song, and play the one
 		 * that was selected.
 		 */
-JButton one = new JButton();
-JButton two = new JButton();
-JButton three = new JButton();
-JButton four = new JButton();
-JButton five = new JButton();
 
     JFrame frame = new JFrame();
     frame.setVisible(true);
@@ -89,6 +88,35 @@ JButton five = new JButton();
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
+		if(arg0.getSource()==one){
+			Song Song1 = new Song("Jarico - Landscape my-free-mp3s.com.mp3");
+			
+			Song1.play();
+			
+		}
+		
+		if(arg0.getSource()==two){
+			Song Song2 = new Song("jarico-retrovi.mp3");
+			Song2.play();
+			
+		}
+		if(arg0.getSource()==three){
+			Song Song3 = new Song("Island - Jarico my-free-mp3s.com .mp3");
+			Song3.play();
+			
+		}
+	if(arg0.getSource()==four) {
+		Song Song4 = new Song("Jarico - Dance my-free-mp3s.com .mp3");
+		Song4.play();
+		
+	}
+	
+	else if(arg0.getSource()==five) {
+		
+		Song Song5 = new Song("Jarico - Waves (Original Mix) my-free-mp3s.com  (1).mp3");
+		Song5.play();
+		
+	}
 		
 	}
 
